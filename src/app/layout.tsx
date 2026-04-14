@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "KINETIC_CORE // Portfolio",
+  title: "Ammar Portfolio",
   description:
     "Backend architect & DevOps engineer specializing in high-concurrency systems and automated infrastructure.",
   keywords: [
