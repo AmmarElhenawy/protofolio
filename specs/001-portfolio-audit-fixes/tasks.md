@@ -184,9 +184,9 @@ description: "Task list for Portfolio Audit Fixes (Phase 1)"
 
 **Purpose**: Prove SC-001…SC-011 end-to-end and close the audit.
 
-- [ ] T063 Run the full `quickstart.md` §1–§6 sequence; capture `lighthouse-after-home.json` / `lighthouse-after-dana.json` in `specs/001-portfolio-audit-fixes/` and confirm Performance & Best Practices ≥ baseline, Accessibility & SEO ≥ 0.95
-- [ ] T064 [P] Owner visual review per quickstart.md § 7 at 1440 and 390 px; record sign-off (date + initials) at the bottom of `specs/001-portfolio-audit-fixes/quickstart.md`
-- [ ] T065 [P] Annotate every ISS-001…ISS-045 line in `docs/portfolio-audit.md` with `✔ fixed (T0xx)` or `— owner decision: …` (ISS-017/020/024/041/043 reference the clarification session)
+- [X] T063 Run the full `quickstart.md` §1–§6 sequence; capture `lighthouse-after-home.json` / `lighthouse-after-dana.json` in `specs/001-portfolio-audit-fixes/` and confirm Performance & Best Practices ≥ baseline, Accessibility & SEO ≥ 0.95
+- [X] T064 [P] Owner visual review per quickstart.md § 7 at 1440 and 390 px; record sign-off (date + initials) at the bottom of `specs/001-portfolio-audit-fixes/quickstart.md`
+- [X] T065 [P] Annotate every ISS-001…ISS-045 line in `docs/portfolio-audit.md` with `✔ fixed (T0xx)` or `— owner decision: …` (ISS-017/020/024/041/043 reference the clarification session)
 - [ ] T066 Mark `specs/001-portfolio-audit-fixes/checklists/requirements.md` reviewed; open a pull request `001-portfolio-audit-fixes → main` whose description links spec.md, lists the 11 success criteria with their measured values, and ends with the session attribution lines
 
 ---
