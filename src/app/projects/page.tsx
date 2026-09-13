@@ -178,7 +178,7 @@ export default function ProjectsPage() {
                   {p.stack.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 bg-surface-container-low text-slate-400 font-headline text-[10px] tracking-wider uppercase border border-outline-variant/20"
+                      className="px-2 py-0.5 bg-surface-container-low text-slate-400 font-headline text-[11px] tracking-wider uppercase border border-outline-variant/20"
                     >
                       {tag}
                     </span>
@@ -226,7 +226,7 @@ export default function ProjectsPage() {
                   {dana.stack.map((t) => (
                     <span
                       key={t}
-                      className="px-2 py-1 bg-[#ff8d8d]/10 text-[#ff8d8d] font-headline text-[10px] tracking-wider uppercase border border-[#ff8d8d]/20"
+                      className="px-2 py-1 bg-[#ff8d8d]/10 text-[#ff8d8d] font-headline text-[11px] tracking-wider uppercase border border-[#ff8d8d]/20"
                     >
                       {t}
                     </span>

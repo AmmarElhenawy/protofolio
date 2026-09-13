@@ -153,7 +153,7 @@ export default function CodePage() {
                 <div className="lg:col-span-4 p-6 sm:p-8 flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
                     <span
-                      className={`px-2 py-0.5 text-[10px] font-label uppercase tracking-widest border ${mod.langColor}`}
+                      className={`px-2 py-0.5 text-[11px] font-label uppercase tracking-widest border ${mod.langColor}`}
                     >
                       {mod.language}
                     </span>
@@ -161,7 +161,7 @@ export default function CodePage() {
                   <h3 className="font-headline text-2xl font-bold text-on-surface tracking-tight mb-1">
                     {mod.name}
                   </h3>
-                  <p className={`text-[10px] font-label uppercase tracking-widest mb-4 ${mod.projectColor}`}>
+                  <p className={`text-[11px] font-label uppercase tracking-widest mb-4 ${mod.projectColor}`}>
                     {mod.project}
                   </p>
                   <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-auto">

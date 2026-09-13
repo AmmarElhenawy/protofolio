@@ -58,7 +58,7 @@ export function PageHeading({
         <div className="flex items-center gap-2 mb-2">
           {eyebrow ? (
             <span
-              className={`px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase border ${ACCENT_BG[accent]} ${ACCENT_TEXT[accent]} ${ACCENT_BORDER[accent]}`}
+              className={`px-2 py-0.5 text-[11px] font-bold tracking-widest uppercase border ${ACCENT_BG[accent]} ${ACCENT_TEXT[accent]} ${ACCENT_BORDER[accent]}`}
             >
               {eyebrow}
             </span>

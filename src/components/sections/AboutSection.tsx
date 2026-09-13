@@ -63,7 +63,7 @@ export default function AboutSection() {
                 <div key={label} className="flex items-center gap-4">
                   <Icon name={icon} size={18} className="text-[#ff8d8d] flex-shrink-0" />
                   <div className="min-w-0">
-                    <span className="text-[10px] font-label text-slate-400 uppercase tracking-widest block">
+                    <span className="text-[11px] font-label text-slate-400 uppercase tracking-widest block">
                       {label}
                     </span>
                     <span className="text-sm font-headline text-on-surface break-words block">
@@ -151,7 +151,7 @@ export default function AboutSection() {
                         {t.title}
                       </span>
                     </div>
-                    <span className="font-label text-[10px] uppercase tracking-widest flex-shrink-0">
+                    <span className="font-label text-[11px] uppercase tracking-widest flex-shrink-0">
                       {t.status}
                     </span>
                   </div>
@@ -174,7 +174,7 @@ export default function AboutSection() {
                   <h4 className="font-headline font-bold text-xs sm:text-sm mb-1">
                     {label}
                   </h4>
-                  <p className="font-label text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest">
+                  <p className="font-label text-[11px] text-slate-400 uppercase tracking-widest">
                     {desc}
                   </p>
                 </div>

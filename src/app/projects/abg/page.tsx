@@ -226,7 +226,7 @@ export default function AbgPage() {
                     {f.tags.map((t) => (
                       <span
                         key={t}
-                        className="bg-surface-container-low px-3 py-1 rounded text-[10px] font-label text-slate-400 border border-outline-variant/10"
+                        className="bg-surface-container-low px-3 py-1 rounded text-[11px] font-label text-slate-400 border border-outline-variant/10"
                       >
                         {t}
                       </span>

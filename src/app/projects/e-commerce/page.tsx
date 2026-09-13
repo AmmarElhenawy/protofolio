@@ -4,7 +4,7 @@ import { Icon, type IconName } from "@/components/ui/icon";
 import { PageHeading } from "@/components/ui/page-heading";
 
 export const metadata: Metadata = {
-  title: "E-Commerce API Platform",
+  title: "E-Commerce API",
   description:
     "A RESTful commerce backend built with Node.js and Express — JWT authentication, cart management, and order tracking on MongoDB.",
 };
@@ -188,7 +188,7 @@ export default function EcommercePage() {
                     {f.tags.map((t) => (
                       <span
                         key={t}
-                        className="bg-surface-container-low px-3 py-1 rounded text-[10px] font-label text-slate-400 border border-outline-variant/10"
+                        className="bg-surface-container-low px-3 py-1 rounded text-[11px] font-label text-slate-400 border border-outline-variant/10"
                       >
                         {t}
                       </span>

@@ -54,7 +54,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
         type="button"
         onClick={onClose}
         aria-label="Close menu"
-        className="lg:hidden absolute top-4 right-4 flex items-center justify-center w-10 h-10 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition-colors active:scale-95"
+        className="lg:hidden absolute top-20 right-4 flex items-center justify-center w-10 h-10 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition-colors active:scale-95"
       >
         <Icon name="x" size={18} />
       </button>

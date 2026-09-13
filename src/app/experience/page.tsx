@@ -85,7 +85,7 @@ export default function ExperiencePage() {
                             <h3 className="text-2xl font-headline font-black tracking-tighter text-on-surface">
                               {exp.role}
                             </h3>
-                            <span className={`px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase border ${exp.badgeColor}`}>
+                            <span className={`px-2 py-0.5 text-[11px] font-bold tracking-widest uppercase border ${exp.badgeColor}`}>
                               {exp.type === "work" ? "Full-time" : "Internship"}
                             </span>
                           </div>
@@ -108,7 +108,7 @@ export default function ExperiencePage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                       <div className="lg:col-span-2">
                         <div>
-                          <p className="text-[10px] font-label text-slate-400 uppercase tracking-[0.2em] mb-4">
+                          <p className="text-[11px] font-label text-slate-400 uppercase tracking-[0.2em] mb-4">
                             Key Contributions
                           </p>
                           <ul className="space-y-3">
@@ -123,14 +123,14 @@ export default function ExperiencePage() {
                           </ul>
                         </div>
                         <div className="mt-6">
-                          <p className="text-[10px] font-label text-slate-400 uppercase tracking-[0.2em] mb-4">
+                          <p className="text-[11px] font-label text-slate-400 uppercase tracking-[0.2em] mb-4">
                             Technologies Used
                           </p>
                           <div className="flex flex-wrap gap-2">
                             {exp.tags.map((tag) => (
                               <span
                                 key={tag}
-                                className="bg-surface-container-high px-3 py-1.5 text-[10px] font-label text-slate-300 border border-outline-variant/10 uppercase tracking-wider"
+                                className="bg-surface-container-high px-3 py-1.5 text-[11px] font-label text-slate-300 border border-outline-variant/10 uppercase tracking-wider"
                               >
                                 {tag}
                               </span>
@@ -197,7 +197,7 @@ export default function ExperiencePage() {
                   <div className="flex items-start justify-between mb-4">
                     <Icon name={course.icon} size={20} className={iconColor} />
                     <span
-                      className={`px-2 py-0.5 text-[9px] font-bold tracking-widest uppercase border ${statusColor}`}
+                      className={`px-2 py-0.5 text-[11px] font-bold tracking-widest uppercase border ${statusColor}`}
                     >
                       {course.status}
                     </span>
@@ -207,7 +207,7 @@ export default function ExperiencePage() {
                     {course.title}
                   </h3>
 
-                  <p className={`text-[10px] font-label uppercase tracking-widest mb-4 ${iconColor}`}>
+                  <p className={`text-[11px] font-label uppercase tracking-widest mb-4 ${iconColor}`}>
                     {course.subtitle}
                   </p>
 
@@ -219,7 +219,7 @@ export default function ExperiencePage() {
                     {course.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="bg-surface-container-low px-2 py-0.5 text-[10px] font-label text-slate-400 border border-outline-variant/10"
+                        className="bg-surface-container-low px-2 py-0.5 text-[11px] font-label text-slate-400 border border-outline-variant/10"
                       >
                         {tag}
                       </span>

@@ -214,7 +214,7 @@ export default function DevOpsPage() {
                   {task.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-surface-container-low px-2 py-0.5 text-[10px] font-label text-slate-400 border border-outline-variant/10"
+                      className="bg-surface-container-low px-2 py-0.5 text-[11px] font-label text-slate-400 border border-outline-variant/10"
                     >
                       {tag}
                     </span>
@@ -263,7 +263,7 @@ export default function DevOpsPage() {
                   {task.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-surface-container-low px-2 py-0.5 text-[10px] font-label text-slate-400 border border-outline-variant/10"
+                      className="bg-surface-container-low px-2 py-0.5 text-[11px] font-label text-slate-400 border border-outline-variant/10"
                     >
                       {tag}
                     </span>

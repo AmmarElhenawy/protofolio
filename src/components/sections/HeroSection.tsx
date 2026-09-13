@@ -63,7 +63,7 @@ export default function HeroSection() {
               <span className="font-headline text-[11px] tracking-widest uppercase text-tertiary block">
                 Status
               </span>
-              <span className="font-headline font-bold text-[10px] sm:text-xs text-on-surface">
+              <span className="font-headline font-bold text-[11px] text-on-surface">
                 READY_FOR_CODE
               </span>
             </div>
@@ -76,9 +76,9 @@ export default function HeroSection() {
             <p className="block md:hidden font-headline uppercase tracking-[0.4em] text-primary mb-1 text-xs">
               Identification
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-headline font-black text-on-surface leading-none mb-4 md:mb-0">
-              HELLO, I&apos;M{" "}
-              <span className="text-glow-primary text-primary">AMMAR</span>
+            <h1 className="uppercase text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-headline font-black text-on-surface leading-none mb-4 md:mb-0">
+              Hello, I&apos;m{" "}
+              <span className="text-glow-primary text-primary">Ammar</span>
             </h1>
 
             <p className="font-headline uppercase tracking-[0.4em] text-[#feca5d] mb-2 mt-6 text-sm">

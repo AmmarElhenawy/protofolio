@@ -69,7 +69,7 @@ description: "Task list for Portfolio Audit Fixes (Phase 1)"
 - [X] T020 [P] [US1] Update `src/components/layout/TopNav.tsx`: remove the "Active" badge and its `sensors` icon; delete the `"/about"` entry from `pageTitles`; change titles to nav labels per contracts/routes.md (`Home`, `Projects`, `Experience`, `Code`, `Project` for `/projects/*`, `Not found` fallback); type `pageTitles` as `Partial<Record<Route, string>>` from `src/lib/routes.ts`
 - [X] T021 [P] [US1] Update `src/components/layout/Footer.tsx`: remove "Status: Online"; year → `{new Date().getFullYear()}`; external links become `<a href target="_blank" rel="noopener noreferrer">`
 - [X] T022 [P] [US1] Update `src/app/projects/dana/page.tsx` header only: remove "Production Ready" badge text (replace with "NestJS API" per contracts/routes.md) and change the "Response Time / 42ms avg" stat to a verifiable one (`{ label: "Real-time", value: "Socket.io" }`)
-- [ ] T023 [US1] Run `npm run check && npx next build`, then `npm run audit:ui` and confirm H1, H2, H3, A9, A10 pass on `/`; commit "US1: credible hero and shell"
+- [X] T023 [US1] Run `npm run check && npx next build`, then `npm run audit:ui` and confirm H1, H2, H3, A9, A10 pass on `/`; commit "US1: credible hero and shell"
 
 **Checkpoint**: Home page first screen is correct and honest; MVP demoable.
 
@@ -93,7 +93,7 @@ description: "Task list for Portfolio Audit Fixes (Phase 1)"
 - [X] T033 [P] [US2] Fix `src/app/code/page.tsx`: `<PageHeading title="Code Samples" tag="SOURCE_ARCHIVE" intro="Real code snippets from personal and training projects." />`; add `metadata`
 - [X] T034 [US2] Fix `src/app/experience/page.tsx` copy/consistency: `type` badge derived from data (confirm MegaDev "Full-time" with owner, else "Contract"); stats banner values computed from array lengths (`${experiences.length} positions`, `${courses.length} programs`) and "Stack: Laravel · NestJS · Docker"; `<PageHeading title="Experience & Training" eyebrow="Career" tag="DOMAIN: EXP-RECORD" intro="…" />`; add `metadata` (structural fixes continue in US3/US4)
 - [X] T035 [US2] Fix `src/components/sections/AboutSection.tsx` copy: `"FCI - senior student -  b+ average"` → `"Faculty of Computers & Information — senior student, B+ GPA"`; `experience: "2+ Years"` → value derived from the earliest experience date ("Since 2024"); rename the component `AboutPage` → `AboutSection`, remove the unused `AppShell` import; make `trainings` import the shared `courses` array from `src/app/experience/page.tsx` (move that array to `src/lib/content/training.ts` and import in both places) so counts cannot drift
-- [ ] T036 [US2] Run `npm run check`, `npx next build`, `npm run audit:ui` (A2, A3, A9 on all routes) and the grep from quickstart.md § 3; commit "US2: copy, consistency, headings"
+- [X] T036 [US2] Run `npm run check`, `npx next build`, `npm run audit:ui` (A2, A3, A9 on all routes) and the grep from quickstart.md § 3; commit "US2: copy, consistency, headings"
 
 **Checkpoint**: Every page is text-clean, consistently labelled, and has a plain-English `<h1>` with its tag.
 
@@ -112,7 +112,7 @@ description: "Task list for Portfolio Audit Fixes (Phase 1)"
 - [X] T041 [P] [US3] Fix small text in `src/components/sections/HeroSection.tsx` (`text-[9px]` HUD label → `text-[11px]`) and shrink the mobile ambient blob to `w-[min(400px,100vw)]`
 - [X] T042 [P] [US3] Fix `src/app/experience/page.tsx` structure: delete the "Career Timeline" `<section>` and its inline array; delete the commented-out `timeline.map` block and the `// content` comment; remove the empty `branch` field and its label markup; remove the duplicate `key={exp.company}` on the inner div; add `mt-6` before "Technologies Used"; replace `pb-16` on the last entry with `pb-0` (`last:pb-0`)
 - [X] T043 [P] [US3] Fix small text in `src/app/projects/devops/page.tsx` (already `text-[11px]` from T029 — verify) and any remaining `text-[8px]`/`text-[9px]`/`text-[10px]` on phones across `src/app/**/page.tsx` and `src/components/**` (`grep -rn "text-\[\(8\|9\|10\)px\]" src`) → minimum `text-[11px]` on mobile (desktop labels may use `md:text-[10px]`)
-- [ ] T044 [US3] Run `npm run audit:ui` at 390 px (M1–M4, A7, A8) and commit "US3: mobile drawer, text size, timeline"
+- [X] T044 [US3] Run `npm run audit:ui` at 390 px (M1–M4, A7, A8) and commit "US3: mobile drawer, text size, timeline"
 
 **Checkpoint**: Phone experience passes every mobile assertion.
 
@@ -129,7 +129,7 @@ description: "Task list for Portfolio Audit Fixes (Phase 1)"
 - [X] T047 [P] [US4] Fix `src/app/experience/page.tsx` images: work-experience images already `fill` → add `sizes="(max-width: 1024px) 50vw, 15vw"`; course images → slot `relative aspect-[3/1] sm:aspect-[5/2]` with `fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover"`; style the "No Image" fallback tile as a dark gradient with the course icon instead of raw text
 - [X] T048 [P] [US4] Fix banners in `src/app/projects/abg/page.tsx`, `src/app/projects/devops/page.tsx`, `src/app/projects/kafka/page.tsx`, `src/app/projects/dana/page.tsx`: replace inline `style={{ backgroundImage: url(...) }}` / grayscale `<Image>` with `<Image src={banner} alt="…" fill sizes="100vw" className="object-cover" loading="eager" fetchPriority="high" />` followed by `<div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/80 to-surface/40" />` so the stat text meets 4.5:1; DANA hackathon image → `relative aspect-[4/3] md:aspect-auto md:h-full` with `fill sizes="(max-width: 768px) 100vw, 50vw"`
 - [X] T049 [P] [US4] Balance feature grids: in each of `src/app/projects/{abg,clinic,dana,devops,e-commerce,invoices,kafka}/page.tsx` set the highlights grid to `grid-cols-1 md:grid-cols-2 lg:grid-cols-3` with no `md:col-span-2` spans (6 items → 2 rows of 3; `clinic` 5 items → add a sixth real highlight, e.g. "Custom Middleware", or use `lg:grid-cols-5`); remove the `span`/`border` fields from the `features` arrays; in `src/app/projects/kafka/page.tsx` change the schematic column to `lg:col-span-7` (drop `lg:col-span-12 xl:col-span-7`)
-- [ ] T050 [US4] Run `npx next dev` and confirm zero image warnings in the console on every route (`npm run audit:ui` A4, A6); commit "US4: images fill, banners, grids"
+- [X] T050 [US4] Run `npx next dev` and confirm zero image warnings in the console on every route (`npm run audit:ui` A4, A6); commit "US4: images fill, banners, grids"
 
 **Checkpoint**: No half-filled frames, no unreadable banners, no image warnings.
 
@@ -143,8 +143,8 @@ description: "Task list for Portfolio Audit Fixes (Phase 1)"
 
 - [X] T051 [US5] Replace every remaining inline `<svg>` and `material-symbols-outlined` wrapper with `<Icon name=… />` across `src/app/projects/*/page.tsx`, `src/app/experience/page.tsx`, `src/components/sections/AboutSection.tsx`, `src/components/sections/TechStackSection.tsx` (delete the now-unused `const … = <svg…>` constants; `grep -rn "material-symbols\|<svg" src` → only `src/components/ui/icon.tsx`)
 - [X] T052 [P] [US5] Raise low-contrast text: replace `text-slate-600` used for readable labels with `text-slate-400`, and `text-outline` (#747578) text on dark surfaces with `text-on-surface-variant` (#aaabad), in `src/components/layout/TopNav.tsx`, `src/components/layout/Sidebar.tsx`, `src/app/projects/*/page.tsx` (PROJECT_ID / schematic notes), `src/app/experience/page.tsx`, `src/components/sections/*.tsx`; keep `text-slate-600` only for purely decorative separators (`·`)
-- [ ] T053 [P] [US5] Ensure every link/button has an accessible name: audit `src/components/sections/AboutSection.tsx` contact links, `src/components/sections/HeroSection.tsx` social links (done in T016), project-page action buttons (icon + text already), `src/components/layout/TopNav.tsx` hamburger (`aria-label="Open menu"` / `"Close menu"` toggled by `open`)
-- [ ] T054 [US5] Run Lighthouse accessibility on `/` and `/projects/dana` (quickstart.md § 4) and `npm run audit:ui` contrast; fix any reported item; commit "US5: icons, contrast, focus"
+- [X] T053 [P] [US5] Ensure every link/button has an accessible name: audit `src/components/sections/AboutSection.tsx` contact links, `src/components/sections/HeroSection.tsx` social links (done in T016), project-page action buttons (icon + text already), `src/components/layout/TopNav.tsx` hamburger (`aria-label="Open menu"` / `"Close menu"` toggled by `open`)
+- [X] T054 [US5] Run Lighthouse accessibility on `/` and `/projects/dana` (quickstart.md § 4) and `npm run audit:ui` contrast; fix any reported item; commit "US5: icons, contrast, focus"
 
 **Checkpoint**: Accessibility ≥ 95 with zero name/contrast/heading audits failing.
 
@@ -157,9 +157,9 @@ description: "Task list for Portfolio Audit Fixes (Phase 1)"
 **Independent Test**: `scripts/audit.mjs` A1, A2; `curl -s -o /dev/null -w "%{http_code}" /about` → 404 with branded page; paste a project URL into a link-preview tool → page title + image.
 
 - [X] T055 [US6] Create `src/app/not-found.tsx` rendering `<AppShell>` + `<PageHeading title="Page not found" tag="404" intro="The address you followed does not exist." />` + a `Link` to `/` ("Back to home") styled like the hero button; export `metadata = { title: "Page not found" }`
-- [ ] T056 [P] [US6] Verify each `page.tsx` under `src/app/` exports `metadata` with the exact `title` from `contracts/routes.md` and a unique 60–160-char `description` (added in T024–T034; fill any gap, e.g. `src/app/page.tsx` needs none — root default applies)
-- [ ] T057 [P] [US6] Verify T013/T014 outputs: `curl /robots.txt`, `curl /sitemap.xml` list the 11 public routes; `curl -I /opengraph-image` returns `image/png`; `<link rel="icon">` points to the new icon
-- [ ] T058 [US6] Run `npm run audit:ui` A1/A2 and `npx next build` (check for metadata warnings); commit "US6: metadata, 404, sharing"
+- [X] T056 [P] [US6] Verify each `page.tsx` under `src/app/` exports `metadata` with the exact `title` from `contracts/routes.md` and a unique 60–160-char `description` (added in T024–T034; fill any gap, e.g. `src/app/page.tsx` needs none — root default applies)
+- [X] T057 [P] [US6] Verify T013/T014 outputs: `curl /robots.txt`, `curl /sitemap.xml` list the 11 public routes; `curl -I /opengraph-image` returns `image/png`; `<link rel="icon">` points to the new icon
+- [X] T058 [US6] Run `npm run audit:ui` A1/A2 and `npx next build` (check for metadata warnings); commit "US6: metadata, 404, sharing"
 
 **Checkpoint**: Every route titled and shareable; unknown URLs branded.
 

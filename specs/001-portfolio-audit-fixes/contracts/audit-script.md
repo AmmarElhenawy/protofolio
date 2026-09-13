@@ -1,6 +1,6 @@
 # Contract: `scripts/audit.mjs` (verification sweep)
 
-Run with the dev server on port 3000: `playwright-cli run-code --filename=scripts/audit.mjs`. Throw (non-zero) on any failed assertion; otherwise print a per-route table.
+Run with the dev server on port 3000 and a playwright-cli browser session already open (`playwright-cli open <url>`): `playwright-cli run-code --filename=scripts/audit.mjs`. The file must be a single function expression (no import/export - playwright-cli constraint). Throws on any failed assertion; otherwise returns a per-route table.
 
 Inputs: route list from `contracts/routes.md` (plus `/projects/clinc`, `/about`, `/definitely-missing`); viewports `1440×900` and `390×844` (plus `1280×800` and `1920×1080` for the hero-overlap check only).
 

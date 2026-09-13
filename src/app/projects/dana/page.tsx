@@ -7,7 +7,7 @@ import hackathonPhoto from "@/assets/images/dana-hackathon.jpg";
 import bannerPhoto from "@/assets/images/dana-banner.jpg";
 
 export const metadata: Metadata = {
-  title: "Project: DANA",
+  title: "DANA — Pediatric Health Platform",
   description:
     "A NestJS medical support API for pediatric growth monitoring, role-based therapeutic coordination, and real-time chat — 3rd place at the Delta Hackathon 2025.",
 };
@@ -246,7 +246,7 @@ export default function DanaPage() {
                     {f.tags.map((t) => (
                       <span
                         key={t}
-                        className="bg-surface-container-low px-3 py-1 rounded text-[10px] font-label text-slate-400 border border-outline-variant/10"
+                        className="bg-surface-container-low px-3 py-1 rounded text-[11px] font-label text-slate-400 border border-outline-variant/10"
                       >
                         {t}
                       </span>
