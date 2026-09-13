@@ -135,9 +135,9 @@ export default function AbgPage() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
           <div className="bg-surface-container-low p-6 sm:p-8 relative overflow-hidden border-t-2 border-[#7dc8ff]">
             <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#7dc8ff]/5 rounded-full blur-3xl" />
-            <h3 className="text-xs font-label text-[#7dc8ff] uppercase tracking-[0.3em] mb-6">
+            <h2 className="text-xs font-label text-[#7dc8ff] uppercase tracking-[0.3em] mb-6">
               01 // Problem
-            </h3>
+            </h2>
             <p className="text-slate-300 font-body leading-relaxed mb-6">
               Traditional niche communities often lack a centralized, private
               space for seamless interaction, media sharing, and real-time
@@ -157,9 +157,9 @@ export default function AbgPage() {
           </div>
           <div className="bg-surface-container-low p-6 sm:p-8 relative overflow-hidden border-t-2 border-[#00edba]">
             <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#a9ffdf]/5 rounded-full blur-3xl" />
-            <h3 className="text-xs font-label text-[#a9ffdf] uppercase tracking-[0.3em] mb-6">
+            <h2 className="text-xs font-label text-[#a9ffdf] uppercase tracking-[0.3em] mb-6">
               02 // Features
-            </h3>
+            </h2>
             <ul className="text-slate-300 font-body leading-relaxed mb-6 list-disc list-inside space-y-1">
               <li>Sanctum token authentication</li>
               <li>Role-based access</li>
@@ -181,9 +181,9 @@ export default function AbgPage() {
           </div>
           <div className="bg-surface-container-low p-6 sm:p-10 relative overflow-hidden border-t-2 border-[#ff9bd2] md:col-span-2">
             <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#ff9bd2]/10 rounded-full blur-3xl" />
-            <h3 className="text-xs font-label text-[#ff9bd2] uppercase tracking-[0.3em] mb-6">
+            <h2 className="text-xs font-label text-[#ff9bd2] uppercase tracking-[0.3em] mb-6">
               03 // Task
-            </h3>
+            </h2>
             <p className="text-slate-300 font-body leading-relaxed mb-8 max-w-2xl">
               This task was assigned by <span className="text-white font-semibold">ABG Company</span>{" "}
               with a strict deadline of <span className="text-white font-semibold">2 days</span>.
@@ -205,9 +205,9 @@ export default function AbgPage() {
 
         {/* Features Bento Grid */}
         <section className="mb-24">
-          <h3 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8 text-center">
+          <h2 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8 text-center">
             Engineering &amp; Technical Highlights
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f) => (
               <div
@@ -216,9 +216,9 @@ export default function AbgPage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Icon name={f.icon} size={20} className={f.color} />
-                  <h4 className="font-headline font-bold text-lg tracking-tight">
+                  <h2 className="font-headline font-bold text-lg tracking-tight">
                     {f.title}
-                  </h4>
+                  </h2>
                 </div>
                 <p className="text-sm text-slate-400 mb-4">{f.desc}</p>
                 {f.tags.length > 0 && (
@@ -241,12 +241,12 @@ export default function AbgPage() {
         {/* Architecture */}
         <section className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-5">
-            <h3 className="text-xs font-label text-[#7dc8ff] uppercase tracking-[0.3em] mb-4">
+            <h2 className="text-xs font-label text-[#7dc8ff] uppercase tracking-[0.3em] mb-4">
               Architecture Design
-            </h3>
-            <h4 className="text-4xl font-headline font-bold text-on-surface mb-6 tracking-tighter">
+            </h2>
+            <h2 className="text-4xl font-headline font-bold text-on-surface mb-6 tracking-tighter">
               MVC · RESTful API
-            </h4>
+            </h2>
             <p className="text-slate-400 font-body leading-relaxed mb-8">
               Model-View-Controller with RESTful Resource Controllers for
               consistent JSON responses and standard HTTP status codes.
@@ -312,9 +312,9 @@ export default function AbgPage() {
 
         {/* Bottom links */}
         <section className="bg-surface-container-low p-6 sm:p-12 text-center border border-outline-variant/5 mb-12">
-          <h3 className="text-2xl font-headline font-bold mb-8 tracking-tighter">
+          <h2 className="text-2xl font-headline font-bold mb-8 tracking-tighter">
             Explore Technical Documentation
-          </h3>
+          </h2>
           <div className="flex flex-wrap justify-center gap-6">
             {[
               { icon: "bookHalf" as const, label: "API Demo", value: "Postman", color: "text-[#7dc8ff]", href: "https://documenter.getpostman.com/view/42406499/2sBXc8qPbR" },

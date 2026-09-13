@@ -114,9 +114,9 @@ export default function InvoicesPage() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
           <div className="bg-surface-container-low p-6 sm:p-8 relative overflow-hidden border-t-2 border-[#feca5d]">
             <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#feca5d]/5 rounded-full blur-3xl" />
-            <h3 className="text-xs font-label text-[#feca5d] uppercase tracking-[0.3em] mb-6">
+            <h2 className="text-xs font-label text-[#feca5d] uppercase tracking-[0.3em] mb-6">
               01 // Problem
-            </h3>
+            </h2>
             <p className="text-slate-300 font-body leading-relaxed mb-6">
               Managing corporate invoices, tracking payment statuses, and
               handling physical attachments manually is error-prone and
@@ -136,9 +136,9 @@ export default function InvoicesPage() {
           </div>
           <div className="bg-surface-container-low p-6 sm:p-8 relative overflow-hidden border-t-2 border-[#00edba]">
             <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#a9ffdf]/5 rounded-full blur-3xl" />
-            <h3 className="text-xs font-label text-[#a9ffdf] uppercase tracking-[0.3em] mb-6">
+            <h2 className="text-xs font-label text-[#a9ffdf] uppercase tracking-[0.3em] mb-6">
               02 // Features
-            </h3>
+            </h2>
             <ul className="text-slate-300 font-body leading-relaxed mb-6 list-disc list-inside space-y-1">
               <li>Status management (Paid / Unpaid / Partially Paid)</li>
               <li>Document management with file attachments</li>
@@ -161,9 +161,9 @@ export default function InvoicesPage() {
 
         {/* Features Bento Grid */}
         <section className="mb-24">
-          <h3 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8 text-center">
+          <h2 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8 text-center">
             Engineering Highlights
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {features.map((f) => (
               <div
@@ -172,9 +172,9 @@ export default function InvoicesPage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Icon name={f.icon} size={20} className={f.color} />
-                  <h4 className="font-headline font-bold text-lg tracking-tight">
+                  <h2 className="font-headline font-bold text-lg tracking-tight">
                     {f.title}
-                  </h4>
+                  </h2>
                 </div>
                 <p className="text-sm text-slate-400 mb-4">{f.desc}</p>
                 {f.tags.length > 0 && (
@@ -197,12 +197,12 @@ export default function InvoicesPage() {
         {/* Architecture */}
         <section className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-5">
-            <h3 className="text-xs font-label text-[#feca5d] uppercase tracking-[0.3em] mb-4">
+            <h2 className="text-xs font-label text-[#feca5d] uppercase tracking-[0.3em] mb-4">
               Architecture Design
-            </h3>
-            <h4 className="text-4xl font-headline font-bold text-on-surface mb-6 tracking-tighter">
+            </h2>
+            <h2 className="text-4xl font-headline font-bold text-on-surface mb-6 tracking-tighter">
               Laravel MVC · Blade
-            </h4>
+            </h2>
             <p className="text-slate-400 font-body leading-relaxed mb-8">
               Built using the MVC pattern with Blade templating engine for
               server-rendered views and AJAX-ready endpoints for dynamic
@@ -269,9 +269,9 @@ export default function InvoicesPage() {
 
         {/* Bottom links */}
         <section className="bg-surface-container-low p-12 text-center border border-outline-variant/5 mb-12">
-          <h3 className="text-2xl font-headline font-bold mb-8 tracking-tighter">
+          <h2 className="text-2xl font-headline font-bold mb-8 tracking-tighter">
             Explore Source Code
-          </h3>
+          </h2>
           <div className="flex flex-wrap justify-center gap-6">
             <a
               href="https://github.com/AmmarElhenawy/invoices2"

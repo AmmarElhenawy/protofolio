@@ -168,9 +168,9 @@ export default function ProjectsPage() {
                 </div>
               </div>
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="font-headline text-xl font-bold text-on-surface tracking-tight mb-2">
+                <h2 className="font-headline text-xl font-bold text-on-surface tracking-tight mb-2">
                   {p.name}
-                </h3>
+                </h2>
                 <p className="font-body text-sm text-on-surface-variant mb-6">
                   {p.summary}
                 </p>
@@ -216,9 +216,9 @@ export default function ProjectsPage() {
                 </div>
               </div>
               <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-center">
-                <h3 className="font-headline text-2xl sm:text-3xl font-black text-on-surface tracking-tighter mb-4 uppercase">
+                <h2 className="font-headline text-2xl sm:text-3xl font-black text-on-surface tracking-tighter mb-4 uppercase">
                   {dana.name}
-                </h3>
+                </h2>
                 <p className="font-body text-on-surface-variant mb-6 leading-relaxed">
                   {dana.summary}
                 </p>

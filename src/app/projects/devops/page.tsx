@@ -174,9 +174,9 @@ export default function DevOpsPage() {
 
         {/* Docker Tasks Grid */}
         <section className="mb-16">
-          <h3 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8">
+          <h2 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8">
             Docker Tasks
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {dockerTasks.map((task) => (
               <div
@@ -186,9 +186,9 @@ export default function DevOpsPage() {
                 <div className="font-mono text-[11px] uppercase tracking-[3px] text-slate-400 mb-3">
                   Task {task.id}
                 </div>
-                <h4 className="font-headline font-bold text-base tracking-tight text-on-surface mb-2">
+                <h2 className="font-headline font-bold text-base tracking-tight text-on-surface mb-2">
                   {task.title}
-                </h4>
+                </h2>
                 <p className="text-xs text-slate-400 mb-4">{task.desc}</p>
 
                 {task.code && (
@@ -227,9 +227,9 @@ export default function DevOpsPage() {
 
         {/* Jenkins Section */}
         <section className="mb-16">
-          <h3 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8">
+          <h2 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8">
             Jenkins Pipelines
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {jenkinsTasks.map((task) => (
               <div
@@ -239,9 +239,9 @@ export default function DevOpsPage() {
                 <div className="font-mono text-[11px] uppercase tracking-[3px] text-slate-400 mb-3">
                   Task {task.id}
                 </div>
-                <h4 className="font-headline font-bold text-base tracking-tight text-on-surface mb-2">
+                <h2 className="font-headline font-bold text-base tracking-tight text-on-surface mb-2">
                   {task.title}
-                </h4>
+                </h2>
                 <p className="text-xs text-slate-400 mb-4">{task.desc}</p>
 
                 <pre className="bg-surface-container-low p-3 text-[11px] font-mono text-slate-400 mb-4 leading-relaxed">
@@ -276,9 +276,9 @@ export default function DevOpsPage() {
 
         {/* Tech overview footer */}
         <section className="bg-surface-container-low p-12 text-center border border-outline-variant/5 mb-12">
-          <h3 className="text-2xl font-headline font-bold mb-8 tracking-tighter">
+          <h2 className="text-2xl font-headline font-bold mb-8 tracking-tighter">
             Technologies Covered
-          </h3>
+          </h2>
           <div className="flex flex-wrap justify-center gap-4">
             {[
               { label: "Docker", color: "text-[#7dc8ff]" },

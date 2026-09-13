@@ -158,9 +158,9 @@ export default function CodePage() {
                       {mod.language}
                     </span>
                   </div>
-                  <h3 className="font-headline text-2xl font-bold text-on-surface tracking-tight mb-1">
+                  <h2 className="font-headline text-2xl font-bold text-on-surface tracking-tight mb-1">
                     {mod.name}
-                  </h3>
+                  </h2>
                   <p className={`text-[11px] font-label uppercase tracking-widest mb-4 ${mod.projectColor}`}>
                     {mod.project}
                   </p>
