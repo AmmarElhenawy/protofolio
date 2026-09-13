@@ -171,10 +171,10 @@ description: "Task list for Portfolio Audit Fixes (Phase 1)"
 
 **Independent Test**: quickstart.md § 1 and § 5 all produce empty/zero output; `git status --short` empty.
 
-- [ ] T059 [US7] Rewrite `README.md`: what the site is, stack (Next 16 / React 19 / Tailwind 4), `npm run dev|build|start|lint|check|clean|audit:ui`, the stale-`.next` note (ISS-001), where content lives (`src/app/**`, `src/lib/content/`, `src/assets/images/`), how to run the Playwright audit
-- [ ] T060 [P] [US7] Delete dead code: unused icon constants remaining anywhere (`npx eslint src` warnings → 0), the `dimond` misspelling (rename to `xDiamond` icon), commented-out buttons in `src/app/projects/page.tsx` (SOURCE/DOCS/Task_Manager blocks) and `src/app/projects/dana/page.tsx` ("Explore Project" button)
-- [ ] T061 [P] [US7] Confirm assets: `for f in src/assets/images/*; do grep -rq "$(basename "$f")" src --include=*.tsx || echo UNUSED $f; done` → empty; `find src/assets/images -size +300k` → empty; `ls src/components/*.{jpg,jpeg,png}` → none
-- [ ] T062 [US7] Run `npm run clean && npm run check && npx next build` → 0 errors, 0 warnings (including no "inferred your workspace root"); `git status --short` → empty after commit "US7: maintainability"
+- [X] T059 [US7] Rewrite `README.md`: what the site is, stack (Next 16 / React 19 / Tailwind 4), `npm run dev|build|start|lint|check|clean|audit:ui`, the stale-`.next` note (ISS-001), where content lives (`src/app/**`, `src/lib/content/`, `src/assets/images/`), how to run the Playwright audit
+- [X] T060 [P] [US7] Delete dead code: unused icon constants remaining anywhere (`npx eslint src` warnings → 0), the `dimond` misspelling (rename to `xDiamond` icon), commented-out buttons in `src/app/projects/page.tsx` (SOURCE/DOCS/Task_Manager blocks) and `src/app/projects/dana/page.tsx` ("Explore Project" button)
+- [X] T061 [P] [US7] Confirm assets: `for f in src/assets/images/*; do grep -rq "$(basename "$f")" src --include=*.tsx || echo UNUSED $f; done` → empty; `find src/assets/images -size +300k` → empty; `ls src/components/*.{jpg,jpeg,png}` → none
+- [X] T062 [US7] Run `npm run clean && npm run check && npx next build` → 0 errors, 0 warnings (including no "inferred your workspace root"); `git status --short` → empty after commit "US7: maintainability"
 
 **Checkpoint**: Owner tooling is silent and documented.
 
