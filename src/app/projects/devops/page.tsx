@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import AppShell from "@/components/layout/AppShell";
-import devops_IMG from "../../../components/depi.jpg";
+import Image from "next/image";
+import { PageHeading } from "@/components/ui/page-heading";
+import banner from "@/assets/images/devops-banner.jpg";
+
+export const metadata: Metadata = {
+  title: "DevOps Task Suite",
+  description:
+    "Docker, Docker Compose, Portainer, and Jenkins pipeline tasks from the DEPI DevOps training program.",
+};
 
 const dockerTasks = [
   {
@@ -26,8 +35,8 @@ back_database:
   - redis_container
   - mariadb_container
 
-nginx ✗ mariadb (isolated)
-redis ✓ bridge between layers`,
+nginx x mariadb (isolated)
+redis - bridge between layers`,
     tags: ["Docker", "Nginx", "Redis", "MariaDB"],
   },
   {
@@ -85,7 +94,7 @@ const jenkinsTasks = [
     borderColor: "border-[#a9ffdf]",
     title: "Basic Jenkins Pipeline",
     desc: "CI pipeline for a Java/Maven project with three stages.",
-    code: `Fetch Code → Build → Test
+    code: `Fetch Code -> Build -> Test
 
 repo: hkhcoder/vprofile-project
 build: Apache Maven
@@ -100,10 +109,10 @@ test:  Unit Tests (Maven)`,
   {
     id: "JNK-002",
     borderColor: "border-[#feca5d]",
-    title: "Full CI/CD Pipeline → DockerHub",
+    title: "Full CI/CD Pipeline -> DockerHub",
     desc: "End-to-end pipeline from source to deployed container.",
-    code: `Clone → Test → Build →
-Docker Image → Push DockerHub →
+    code: `Clone -> Test -> Build ->
+Docker Image -> Push DockerHub ->
 Deploy Container`,
     steps: [
       "Build Docker image from Dockerfile in repo",
@@ -121,47 +130,37 @@ export default function DevOpsPage() {
       <div className="px-4 sm:px-8 lg:px-12 py-8 max-w-7xl mx-auto w-full flex-1">
         {/* Hero Header */}
         <section className="mb-20">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="px-2 py-0.5 bg-[#feca5d]/20 text-[#feca5d] text-[10px] font-bold tracking-widest uppercase border border-[#feca5d]/20">
-                  DevOps
-                </span>
-                <span className="text-slate-600 font-label text-xs tracking-tighter">
-                  DOMAIN: OPS-TASKS
-                </span>
-              </div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-headline font-black tracking-tighter text-on-surface mb-4">
-                DevOps{" "}
-                <span className="text-[#feca5d]">Task Suite</span>
-              </h2>
-              <p className="text-xl text-slate-400 max-w-2xl leading-relaxed font-body">
-                A collection of Docker, Docker Compose, Portainer, and Jenkins
-                pipeline tasks demonstrating containerization, orchestration,
-                and CI/CD expertise.
-              </p>
-            </div>
-          </div>
+          <PageHeading
+            title="DevOps Task Suite"
+            eyebrow="DevOps"
+            tag="DOMAIN: OPS-TASKS"
+            accent="secondary"
+            intro="Docker, Docker Compose, Portainer, and Jenkins pipeline tasks from the DEPI (Digital Egypt Pioneers Initiative) DevOps training program, demonstrating containerization, orchestration, and CI/CD."
+          />
+          <p className="mt-4 text-sm text-slate-400 font-body italic">
+            Training tasks — no public repository.
+          </p>
 
           {/* Hero banner */}
-          <div className="relative h-64 w-full overflow-hidden bg-surface-container-low flex items-end">
-            <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10" />
-
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${devops_IMG.src})`,
-              }}
+          <div className="relative h-64 w-full overflow-hidden bg-surface-container-low mt-8">
+            <Image
+              src={banner}
+              alt="DEPI DevOps program banner"
+              fill
+              sizes="100vw"
+              loading="eager"
+              fetchPriority="high"
+              className="object-cover"
             />
-
+            <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/70 to-surface/30" />
             <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 z-20 flex flex-wrap gap-6 sm:gap-12">
               {[
                 { label: "Containers", value: "Docker / Compose", color: "text-[#feca5d]" },
-                { label: "Orchestration", value: "Portainer", color: "text-[#7dc8ff]" },
+                { label: "Management UI", value: "Portainer", color: "text-[#7dc8ff]" },
                 { label: "CI/CD", value: "Jenkins Pipelines", color: "text-[#a9ffdf]" },
               ].map(({ label, value, color }) => (
                 <div key={label}>
-                  <p className={`text-[10px] font-label ${color} uppercase tracking-widest mb-1`}>
+                  <p className={`text-[11px] font-label ${color} uppercase tracking-widest mb-1`}>
                     {label}
                   </p>
                   <p className="text-xl font-headline font-bold text-on-surface tracking-tight">
@@ -175,7 +174,7 @@ export default function DevOpsPage() {
 
         {/* Docker Tasks Grid */}
         <section className="mb-16">
-          <h3 className="text-xs font-label text-slate-500 uppercase tracking-[0.3em] mb-8">
+          <h3 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8">
             Docker Tasks
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -184,7 +183,7 @@ export default function DevOpsPage() {
                 key={task.id}
                 className="bg-surface-container-high p-6 hover:bg-[#1d2023] transition-all group"
               >
-                <div className="font-mono text-[8px] uppercase tracking-[3px] text-on-surface-variant/50 mb-3">
+                <div className="font-mono text-[11px] uppercase tracking-[3px] text-slate-400 mb-3">
                   Task {task.id}
                 </div>
                 <h4 className="font-headline font-bold text-base tracking-tight text-on-surface mb-2">
@@ -193,7 +192,7 @@ export default function DevOpsPage() {
                 <p className="text-xs text-slate-400 mb-4">{task.desc}</p>
 
                 {task.code && (
-                  <pre className="bg-surface-container-low p-3 text-[10px] font-mono text-slate-400 mb-4 leading-relaxed overflow-x-auto">
+                  <pre className="bg-surface-container-low p-3 text-[11px] font-mono text-slate-400 mb-4 leading-relaxed overflow-x-auto">
                     {task.code}
                   </pre>
                 )}
@@ -202,7 +201,7 @@ export default function DevOpsPage() {
                   <div className="space-y-2 mb-4">
                     {task.steps.map((step, i) => (
                       <div key={i} className="flex items-start gap-3">
-                        <span className="text-[#feca5d] font-mono text-[10px] font-bold flex-shrink-0 mt-0.5">
+                        <span className="text-[#feca5d] font-mono text-[11px] font-bold flex-shrink-0 mt-0.5">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span className="text-[11px] text-slate-400">{step}</span>
@@ -228,7 +227,7 @@ export default function DevOpsPage() {
 
         {/* Jenkins Section */}
         <section className="mb-16">
-          <h3 className="text-xs font-label text-slate-500 uppercase tracking-[0.3em] mb-8">
+          <h3 className="text-xs font-label text-slate-400 uppercase tracking-[0.3em] mb-8">
             Jenkins Pipelines
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -237,7 +236,7 @@ export default function DevOpsPage() {
                 key={task.id}
                 className={`bg-surface-container-high p-6 hover:bg-[#1d2023] transition-all border-t-2 ${task.borderColor}`}
               >
-                <div className="font-mono text-[8px] uppercase tracking-[3px] text-on-surface-variant/50 mb-3">
+                <div className="font-mono text-[11px] uppercase tracking-[3px] text-slate-400 mb-3">
                   Task {task.id}
                 </div>
                 <h4 className="font-headline font-bold text-base tracking-tight text-on-surface mb-2">
@@ -245,14 +244,14 @@ export default function DevOpsPage() {
                 </h4>
                 <p className="text-xs text-slate-400 mb-4">{task.desc}</p>
 
-                <pre className="bg-surface-container-low p-3 text-[10px] font-mono text-slate-400 mb-4 leading-relaxed">
+                <pre className="bg-surface-container-low p-3 text-[11px] font-mono text-slate-400 mb-4 leading-relaxed">
                   {task.code}
                 </pre>
 
                 <div className="space-y-2 mb-4">
                   {task.steps.map((step, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <span className="text-[#feca5d] font-mono text-[10px] font-bold flex-shrink-0 mt-0.5">
+                      <span className="text-[#feca5d] font-mono text-[11px] font-bold flex-shrink-0 mt-0.5">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span className="text-[11px] text-slate-400">{step}</span>

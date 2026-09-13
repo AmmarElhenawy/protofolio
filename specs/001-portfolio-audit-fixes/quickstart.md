@@ -80,3 +80,14 @@ Open `/`, `/projects`, `/experience`, `/projects/dana` at 1440 and 390 px and co
 ## Definition of done
 
 All of steps 1–6 pass and step 7 is signed off; `docs/portfolio-audit.md` items are each annotated `✔ fixed` with the commit; PR opened from `001-portfolio-audit-fixes` to `main`.
+
+## Baseline (captured 2026-09-13, before any Phase 1 code change)
+
+Command: `npx lighthouse <url> --form-factor=mobile --screenEmulation.mobile=true --chrome-flags="--headless=new"`
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|------|-------------|----------------|-----------------|-----|
+| `/` | 0.46–0.54 | 0.91 | 1.00 | 1.00 |
+| `/projects/dana` | 0.58 | 0.96 | 1.00 | 1.00 |
+
+Raw reports: `lighthouse-baseline-home.json`, `lighthouse-baseline-dana.json` (this directory). Performance varied slightly (0.46/0.54) across two home-page runs due to normal Lighthouse lab-data variance; both are recorded as the floor to beat. Post-implementation values are captured in T063 as `lighthouse-after-*.json` and must be ≥ these Performance/Best-Practices numbers, with Accessibility and SEO ≥ 0.95.

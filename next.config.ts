@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: path.resolve(__dirname),
+  },
   images: {
     remotePatterns: [
       {
@@ -9,6 +13,15 @@ const nextConfig: NextConfig = {
         pathname: "/aida-public/**",
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/projects/clinc",
+        destination: "/projects/clinic",
+        permanent: true,
+      },
+    ];
   },
 };
 

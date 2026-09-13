@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import AppShell from "@/components/layout/AppShell";
+import { PageHeading } from "@/components/ui/page-heading";
+
+export const metadata: Metadata = {
+  title: "Code Samples",
+  description:
+    "Real code snippets from Ammar Elhenawy's personal and training projects — authentication, Docker Compose, and Jenkins pipelines.",
+};
 
 const modules = [
   {
@@ -124,20 +132,13 @@ export default function CodePage() {
   return (
     <AppShell>
       <div className="px-4 sm:px-8 lg:px-12 py-8 max-w-7xl w-full mx-auto flex-1">
-        {/* Header */}
         <div className="mb-12">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="h-2 w-2 bg-[#ff8d8d] animate-pulse" />
-            <span className="font-headline text-xs text-[#ff8d8d] uppercase tracking-[0.3em]">
-              Source_Archive
-            </span>
-          </div>
-          <h2 className="font-headline text-4xl sm:text-5xl font-black text-on-surface tracking-tighter uppercase mb-2">
-            Code_Modules
-          </h2>
-          <p className="font-body text-on-surface-variant max-w-2xl leading-relaxed">
-            Real code snippets from personal and training projects.
-          </p>
+          <PageHeading
+            title="Code Samples"
+            eyebrow="Backend Snippets"
+            tag="SOURCE_ARCHIVE"
+            intro="Real code snippets from personal and training projects."
+          />
         </div>
 
         {/* Code Modules */}
@@ -176,7 +177,7 @@ export default function CodePage() {
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
                     </div>
-                    <span className="text-[10px] font-label text-slate-600 uppercase tracking-widest">
+                    <span className="text-[11px] font-label text-slate-400 uppercase tracking-widest">
                       {mod.name.toLowerCase()}.module
                     </span>
                   </div>
