@@ -91,3 +91,16 @@ Command: `npx lighthouse <url> --form-factor=mobile --screenEmulation.mobile=tru
 | `/projects/dana` | 0.58 | 0.96 | 1.00 | 1.00 |
 
 Raw reports: `lighthouse-baseline-home.json`, `lighthouse-baseline-dana.json` (this directory). Performance varied slightly (0.46/0.54) across two home-page runs due to normal Lighthouse lab-data variance; both are recorded as the floor to beat. Post-implementation values are captured in T063 as `lighthouse-after-*.json` and must be ≥ these Performance/Best-Practices numbers, with Accessibility and SEO ≥ 0.95.
+
+## After implementation (captured 2026-09-13)
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|------|-------------|----------------|-----------------|-----|
+| `/` | 0.52 | **1.00** (was 0.91) | 1.00 | 1.00 |
+| `/projects/dana` | 0.59-0.60 | **1.00** (was 0.96) | 1.00 | 1.00 |
+
+Accessibility reached a perfect score on both pages after fixing the heading hierarchy (section headers were `<h3>` directly under `<h1>`, skipping `<h2>`), the icon/contrast/labelling work (US5), and the single-`<h1>`-per-page rule (US1/US2). Performance is flat-to-improved within normal Lighthouse lab-data variance; SEO and Best Practices were already 1.00 and remain so. Raw reports: `lighthouse-after-home.json`, `lighthouse-after-dana.json`.
+
+Full `scripts/audit.mjs` sweep (11 routes x 2 viewports, hero overlap at 1280/1440/1920, headline stability, reduced motion, `/projects/clinc` redirect, both 404 checks, mobile drawer via Escape/overlay/close-button/tap, skip link): **PASSED**, zero failures.
+
+`npm run check` (eslint + tsc) and `npx next build` (18 routes): zero errors, zero warnings.
