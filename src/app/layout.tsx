@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
-<html lang="en" data-scroll-behavior="smooth"></html>
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,19 +16,37 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ammar-portfolio.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Ammar Portfolio",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    template: "%s · Ammar Elhenawy",
+    default: "Ammar Elhenawy — Backend & DevOps Engineer",
+  },
   description:
-    "Backend architect & DevOps engineer specializing in high-concurrency systems and automated infrastructure.",
+    "Backend developer specializing in Laravel, NestJS and Node.js APIs, currently expanding into Docker and CI/CD.",
   keywords: [
-    "backend",
+    "backend developer",
     "devops",
-    "engineer",
     "portfolio",
-    "kubernetes",
-    "golang",
+    "laravel",
     "nestjs",
+    "node.js",
+    "docker",
   ],
+  openGraph: {
+    type: "website",
+    siteName: "Ammar Elhenawy",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0c0e10",
 };
 
 export default function RootLayout({
